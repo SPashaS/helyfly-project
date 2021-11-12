@@ -1,6 +1,18 @@
-body {
-    background-color: rgb(37, 37, 37);
-    color: white;
+@import "./abstracts/vars";
+@import "./abstracts/mixins";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@import './style2.scss'
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import './layout/header';
+@import './layout/main-block';
