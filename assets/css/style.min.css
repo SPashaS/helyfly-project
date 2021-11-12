@@ -1,2 +1,27 @@
-body{background-color:#252525;color:#fff}p{color:red}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+.header {
+  background-color: #fff; }
+  .header__inner {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__logo {
+    margin-right: 45px; }
+  .header__phone {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5286EC; }
+
 /*# sourceMappingURL=style.min.css.map */
