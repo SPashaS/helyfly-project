@@ -1,7 +1,25 @@
 .header {
     background-color: $primaryColor;
-    .container {
+    @media screen and (min-width: 768px) {
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    }
 
+    .container {
+        border: 1px solid red;
+        padding: 0 15px;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        @media screen and (min-width: 576px) {
+            padding: 0 35px;
+        }
+        @media screen and (min-width: 768px) {
+            padding: 0 50px;
+        }
+        @media screen and (min-width: 1280px) {
+            padding: 0;
+        }
     }
 
     &__inner {
@@ -9,16 +27,57 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: 768px) {
+            height: 100px;
+        }
+    }
+
+    &__header-wrapper {
+        display: flex;
+        align-items: center;
     }
 
     &__logo {
         margin-right: 45px;
+        width: 84px;
+        height: 15,33px;
+
+        @media screen and (min-width: 576px) {
+            margin-right: 36px;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 140px;
+        }
+    }
+
+    &__city-phone {
+        @include text(14px, 400, 17px, $linkColor);
+
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
     }
 
     &__phone {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: $linkColor;
+        display: none;
+
+        span {
+            @include text(14px, 400, 17px, $textColorLight);
+        }
+
+        @media screen and (min-width: 576px) {
+            display: block;
+        }
+    }
+
+    &__phone-link {
+        @include text(14px, 400, 17px, $textColor);
+    }
+
+    &__user {
+        @media screen and (min-width: 1280px) {
+            display: none;
+        }
     }
 }
