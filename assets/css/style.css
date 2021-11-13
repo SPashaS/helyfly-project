@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    background-color: #fff;
+}
+
+.header__inner {
+    height: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 45px;
+}
+
+.header__phone {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5286EC;
+}
