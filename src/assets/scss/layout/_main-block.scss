@@ -1,0 +1,45 @@
+.main {
+    background-image: url(./../images/main-block/main-bg.jpg);
+    color: $primaryColor;
+    background-size: cover;
+    background-position-x: 62%;
+
+    .container {
+        @extend %container;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 655px;
+    }
+
+    &__title {
+        @include text(32px, 700, 39px, $primaryColor);
+        max-width: 247px;
+        margin-top: -6px;
+
+        span {
+            color: $accentColor;
+        }
+    }
+
+    &__price {
+        height: 93px;
+        width: 208px;
+        margin: 24px 0 12px;
+        margin-left: -5px;
+    }
+
+    &__btn {
+        width: 275px;
+        height: 68px;
+        border: 3px solid $primaryColor;
+        border-radius: 7px;
+        background-color: transparent;
+        @include text(16px, 900, 20px, white);
+        filter:  drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7));
+        // transform: translateX(-6px);
+    }
+}
