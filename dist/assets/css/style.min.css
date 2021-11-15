@@ -97,11 +97,40 @@ body {
     margin-top: -6px; }
     .main__title span {
       color: #FC9B09; }
+    @media (min-width: 768px) {
+      .main__title {
+        max-width: 590px; } }
+    @media (min-width: 1280px) {
+      .main__title {
+        max-width: 880px; } }
+  .main__price-box {
+    position: relative;
+    margin: 24px 0 12px; }
+    .main__price-box::after {
+      content: "";
+      display: block;
+      background-image: url(./../images/main-block/percente.svg);
+      background-repeat: no-repeat;
+      background-size: 47px 47px;
+      width: 47px;
+      height: 47px;
+      position: absolute;
+      top: 16px;
+      left: 138px; }
+      @media (min-width: 768px) {
+        .main__price-box::after {
+          left: 143px;
+          background-size: 52px 52px;
+          width: 52px;
+          height: 52px; } }
   .main__price {
-    height: 93px;
-    width: 208px;
-    margin: 24px 0 12px;
+    height: 86px;
+    width: 200px;
     margin-left: -5px; }
+    @media (min-width: 768px) {
+      .main__price {
+        height: 96px;
+        width: 224px; } }
   .main__btn {
     width: 275px;
     height: 68px;

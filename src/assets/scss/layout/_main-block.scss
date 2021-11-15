@@ -23,13 +23,50 @@
         span {
             color: $accentColor;
         }
+
+        @include media(md) {
+            max-width: 590px;
+        }
+
+        @include media(lg) {
+            max-width: 880px;
+        }
+    }
+    &__price-box {
+        position: relative;
+        margin: 24px 0 12px;
+
+        &::after {
+            content: "";
+            display: block;
+            background-image: url(./../images/main-block/percente.svg);
+            background-repeat: no-repeat;
+            background-size: 47px 47px;
+            width: 47px;
+            height: 47px;
+            position: absolute;
+            top: 16px;
+            left: 138px;
+
+            @include media(md) {
+                left: 143px;
+                background-size: 52px 52px;
+                width: 52px;
+                height: 52px;
+            }
+        }
     }
 
     &__price {
-        height: 93px;
-        width: 208px;
-        margin: 24px 0 12px;
+        height: 86px;
+        width: 200px;
+        
         margin-left: -5px;
+
+        @include media(md) {
+            height: 96px;
+            width: 224px;
+        }
     }
 
     &__btn {
