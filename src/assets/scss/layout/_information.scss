@@ -1,0 +1,91 @@
+.information {
+    @include text(14px, 400, 20px, $textColor);
+
+    .container {
+        @extend %container;
+    }
+
+    &__title {
+        @include text(28px, 400, 34px, $textColor);
+        text-align: center;
+        margin: 38px 0 13px;
+    }
+
+    &__image-wrapper {
+        margin-bottom: 30px;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            background-image: url(./../images/information/play.png);
+            background-size: 12px 17px;
+            width: 12px;
+            height: 17px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+
+    &__image {
+        width: 290px;
+        height: 197px;
+        border-radius: 4px;
+    }
+
+
+    &__description {
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 38px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-wrapper {
+        width: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        @include text(14px, 500, 20px, $textColor);
+        width: 216px;
+    }
+
+                        // rating 
+    &__rating {
+        height: 69px;
+        border-top: 0.5px solid #C7C7C7;
+        border-bottom: 0.5px solid #C7C7C7;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+
+        &-text span {
+            font-weight: 600;
+        }
+    }
+
+    &__rating-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__stars {
+        display: flex;
+        gap: 7px;
+    }
+}
