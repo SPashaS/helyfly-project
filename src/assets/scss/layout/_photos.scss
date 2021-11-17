@@ -1,0 +1,42 @@
+.photos {
+    padding-bottom: 50px;
+    .container {
+        @extend %container;
+    }
+
+    &__title {
+        @include text(26px, 400, 32px, $textColor);
+        margin: 60px auto 32px;
+        text-align: center;
+        width: 196px;
+
+        @include media(md) {
+            @include text(28px, 500, 41px, $textColor);
+            width: 300px;
+            text-align: left;
+            margin-left: 0;
+        }
+
+
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+
+        @include media(md) {
+            margin: 0 auto;
+            flex-wrap: wrap;
+            width: 569px;
+        }
+
+        @include media(lg) {
+            width: 1153px;
+        }
+    }
+
+    &__image {
+        width: 277px;
+    }
+}
