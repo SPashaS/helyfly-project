@@ -48,7 +48,8 @@
 <!-- information -->
 <section class="information">
     <div class="container">
-        <h2 class="information__title">Фотосессия в вертолете</h2>
+        <div class="information__inner">
+            <h2 class="information__title">Фотосессия в вертолете</h2>
         <div class="information__image-wrapper">
             <img class="information__image"src="./assets/images/information/photo.jpg" alt="Фотосессия в вертолете">
         </div>
@@ -87,15 +88,24 @@
             <div class="information__rating-wrapper">
                 <p class="information__rating-text">Более <span>50</span> отзывов с оценкой</p>
                 <div class="information__stars">
-                    <img style="width: 18px; height: 17px;" src="./assets/images/information/star.png" alt="">
-                    <img style="width: 18px; height: 17px;" src="./assets/images/information/star.png" alt="">
-                    <img style="width: 18px; height: 17px;" src="./assets/images/information/star.png" alt="">
-                    <img style="width: 18px; height: 17px;" src="./assets/images/information/star.png" alt="">
-                    <img style="width: 18px; height: 17px;" src="./assets/images/information/star.png" alt="">
+                    <div class="rating">
+                        <input type="radio" name="rating" id="rating-5">
+                        <label for="rating-5"></label>
+                        <input type="radio" name="rating" id="rating-4">
+                        <label for="rating-4"></label>
+                        <input type="radio" name="rating" id="rating-3">
+                        <label for="rating-3"></label>
+                        <input type="radio" name="rating" id="rating-2">
+                        <label for="rating-2"></label>
+                        <input type="radio" name="rating" id="rating-1">
+                        <label for="rating-1"></label>
+                    </div>
                 </div>
             </div>
             
         </div>
+        </div>
+        
     </div>
 </section>
 <!-- / information -->

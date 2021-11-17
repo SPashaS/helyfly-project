@@ -15,6 +15,10 @@ body {
     min-width: 320px;
 }
 
+
+@import './components/rating';
+
+
 @import './layout/header';
 @import './layout/main-block';
 @import './layout/information';
