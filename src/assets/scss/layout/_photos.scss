@@ -1,5 +1,14 @@
 .photos {
     padding-bottom: 50px;
+
+    @include media(md) {
+        padding-bottom: 43px;
+    }
+
+    @include media(lg) {
+        padding-bottom: 37px;
+    }
+
     .container {
         @extend %container;
     }
@@ -28,15 +37,61 @@
         @include media(md) {
             margin: 0 auto;
             flex-wrap: wrap;
-            width: 569px;
+            width: 560px;
+            gap: 11px 10px;
         }
 
         @include media(lg) {
-            width: 1153px;
+            width: 100%;
+            gap: 11px 13px;
         }
     }
 
     &__image {
-        width: 277px;
+        width: 275px;
+    }
+
+    &__footer  {
+        display: none;
+
+        @include media(md) {
+            display: block;
+            height: 90px;
+            padding-top: 45px;
+            text-align: center;
+            border-bottom: 0.5px solid #C7C7C7;
+        }
+    }
+
+    &__link {
+        @include text(17px, 400, 24px, $linkColor);
+        text-decoration: none;
+        position: relative;
+        
+        &::before {
+            content: "";
+            display: block;
+            background-image: url(./../images/photos/arrow.png);
+            background-size: 11px 6px;
+            width: 11px;
+            height: 6px;
+            position: absolute;
+            left: -21px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            background-image: url(./../images/photos/arrow.png);
+            background-size: 11px 6px;
+            width: 11px;
+            height: 6px;
+            position: absolute;
+            right: -21px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
