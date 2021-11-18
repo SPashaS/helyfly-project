@@ -1,0 +1,27 @@
+.record {
+    padding-top: 63px;
+
+    .container {
+        @extend %container;
+    }
+
+    &__table {
+        border: 1px solid #C7C7C7;
+    }
+
+    &__tb-header {
+        height: 60px;
+        border-bottom: 1px solid #C7C7C7;
+        padding: 20px 44px 0;
+    }
+    
+    &__tb-row {
+        border-bottom: 1px solid #C7C7C7;
+        height: 130px;
+        padding: 20px;
+
+        &-inner span {
+            display: block;
+        }
+    }
+}
