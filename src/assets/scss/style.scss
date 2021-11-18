@@ -15,11 +15,16 @@ body {
     min-width: 320px;
 }
 
+a {
+    text-decoration: none;
+}
 
 @import './components/rating';
+@import './components/link-arrow';
 
 
 @import './layout/header';
 @import './layout/main-block';
 @import './layout/information';
 @import './layout/photos';
+@import './layout/about';

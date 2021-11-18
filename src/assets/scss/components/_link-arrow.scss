@@ -1,0 +1,50 @@
+.link {
+    @include text(17px, 400, 24px, $linkColor);
+    position: relative;
+// одна стрелка вниз
+    &--arr-right {
+        &::after {
+            content: "";
+            display: block;
+            background-image: url(./../images/photos/arrow.png);
+            background-size: 11px 6px;
+            width: 11px;
+            height: 6px;
+            position: absolute;
+            right: -21px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+// две стрелки
+    &--two-arr {
+        &::before {
+            content: "";
+            display: block;
+            background-image: url(./../images/photos/arrow.png);
+            background-size: 11px 6px;
+            width: 11px;
+            height: 6px;
+            position: absolute;
+            left: -21px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    
+        &::after {
+            content: "";
+            display: block;
+            background-image: url(./../images/photos/arrow.png);
+            background-size: 11px 6px;
+            width: 11px;
+            height: 6px;
+            position: absolute;
+            right: -21px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    
+    
+}

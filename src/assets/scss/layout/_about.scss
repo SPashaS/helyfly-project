@@ -1,0 +1,98 @@
+.about {
+    padding-top: 63px;
+
+    .container {
+        @extend %container;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media(lg) {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+        }
+    }
+
+    &__image-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 290px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            background-image: url(./../images/about/heart.png);
+            background-size: 31px 27px;
+            width: 31px;
+            height: 27px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__image {
+        margin: 13px 0 23px;
+        width: 139px;
+        height: 139px;
+    }
+
+    &__name {
+        @include text(18px, 500, 22px, $textColor);
+        margin-bottom: 7px;
+    }
+
+    &__profession {
+        @include text(14px, 400, 21px, $textColor);
+        margin-bottom: 7px;
+    }
+
+    &__img-link-more {
+        @include text(14px, 500, 21px, $linkColor);
+        text-align: center;
+        width: 200px;
+        margin-bottom: 25px;
+    }
+    
+    &__discription {
+        @include media(sm) {
+            width: 506px;
+        }
+
+        @include media(md) {
+            width: 584px;
+        }
+    }
+
+
+    &__title {
+        @include text(18px, 500, 26px, $textColor);
+        margin-bottom: 14px;
+    }
+
+    &__text {
+        @include text(16px, 400, 24px, $textColor);
+    }
+
+    &__link-wrap {
+        margin: 22px 0 30px;
+    }
+
+    &__link-more {
+        @include text(14px, 500, 21px, $linkColor);
+    }
+
+    &__footer {
+        display: none;
+
+        @include media(sm) {
+            display: block;
+            border-bottom: 0.5px solid #C7C7C7;
+        }
+    }
+}
