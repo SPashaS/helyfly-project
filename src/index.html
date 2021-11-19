@@ -83,15 +83,14 @@
                 <span class="information__text">Готовы ответить на любые вопросы</span>
             </li>
         </ul>
-        <div class="information__rating">
-            <img class="information__rating-icon" src="./assets/images/information/cup.png" alt="Количество отзывов" >
-            <div class="information__rating-wrapper">
-                <p class="information__rating-text">Более <span>50</span> отзывов с оценкой</p>
-                <div class="information__stars">
-                    <div class="rating">
+        <div class="information__rating-box rating-box">
+            <img class="information__rating-box-icon" src="./assets/images/information/cup.png" alt="Количество отзывов" >
+            <div class="information__rating-box-inner rating-box__inner">
+                <p class="information__rating-box-text rating-box__text">Более <span>50</span> отзывов с оценкой</p>
+                <div class="information__rating rating">
                         <input type="radio" name="rating" id="rating-5">
                         <label for="rating-5"></label>
-                        <input type="radio" name="rating" id="rating-4">
+                        <input type="radio" name="rating" id="rating-4" checked>
                         <label for="rating-4"></label>
                         <input type="radio" name="rating" id="rating-3">
                         <label for="rating-3"></label>
@@ -99,7 +98,6 @@
                         <label for="rating-2"></label>
                         <input type="radio" name="rating" id="rating-1">
                         <label for="rating-1"></label>
-                    </div>
                 </div>
             </div>
             
@@ -173,16 +171,12 @@
 <!-- record -->
 <section class="record">
     <div class="container">
-        <h3 class="record__title">Доступная съемка в ближайшее время:</h3>
+        <h3 class="record__title">Доступная съемка
+            <br>в ближайшее время:
+        </h3>
         <div class="record__table">
-            <div class="record__tb-header">Пятница, 14 сентября</div>
-            <div class="record__tb-row">
-                <div class="record__tb-row-inner">
-                    <span class="record__time">15:00 - 18:00</span>
-                    <span class="record__cost">850$</span>
-                    <span class="record__spaces">Осталось — 1 место</span>
-                </div>
-                <button class="main__btn">Выбрать</button>
+            <div class="record__tb-header">
+                <span class="record__tb-header-time">Пятница, 14 сентября</span>
             </div>
             <div class="record__tb-row">
                 <div class="record__tb-row-inner">
@@ -190,28 +184,35 @@
                     <span class="record__cost">850$</span>
                     <span class="record__spaces">Осталось — 1 место</span>
                 </div>
-                <button class="main__btn">Выбрать</button>
+                <button class="record__btn">Выбрать</button>
+            </div>
+            <div class="record__tb-row">
+                <div class="record__tb-row-inner">
+                    <span class="record__time">15:00 - 18:00</span>
+                    <span class="record__cost">850$</span>
+                    <span class="record__spaces">Осталось — 1 место</span>
+                </div>
+                <button class="record__btn">Выбрать</button>
             </div>
             <div class="record__tb-footer">
-                <div class="rating-box">
-                    <img class="rating-icon" src="./assets/images/information/cup.png" alt="Количество отзывов" >
-                    <div class="rating-wrapper">
-                        <p class="rating-text">Более <span>50</span> отзывов с оценкой</p>
-                        <div class="rating__stars">
-                            <div class="rating">
-                                <input type="radio" name="rating" id="rating-5">
-                                <label for="rating-5"></label>
-                                <input type="radio" name="rating" id="rating-4">
-                                <label for="rating-4"></label>
-                                <input type="radio" name="rating" id="rating-3">
-                                <label for="rating-3"></label>
-                                <input type="radio" name="rating" id="rating-2">
-                                <label for="rating-2"></label>
-                                <input type="radio" name="rating" id="rating-1">
-                                <label for="rating-1"></label>
-                            </div>
+                <div class="record__rating-box rating-box">
+                    <img class="record__rating-box-icon" src="./assets/images/information/cup.png" alt="Количество отзывов" >
+                    <div class="record__rating-box-inner rating-box__inner">
+                        <p class="record__rating-box-text rating-box__text">Более <span>50</span> отзывов с оценкой</p>
+                        <div class="record__rating rating">
+                            <input type="radio" name="rating-1" id="rating-5-1" checked>
+                            <label for="rating-5-1"></label>
+                            <input type="radio" name="rating-1" id="rating-4-1">
+                            <label for="rating-4-1"></label>
+                            <input type="radio" name="rating-1" id="rating-3-1">
+                            <label for="rating-3-1"></label>
+                            <input type="radio" name="rating-1" id="rating-2-1">
+                            <label for="rating-2-1"></label>
+                            <input type="radio" name="rating-1" id="rating-1-1">
+                            <label for="rating-1-1"></label>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>

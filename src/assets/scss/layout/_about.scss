@@ -13,6 +13,7 @@
         @include media(lg) {
             flex-direction: row-reverse;
             align-items: flex-start;
+            justify-content: space-between;
         }
     }
 
@@ -22,6 +23,10 @@
         align-items: center;
         width: 290px;
         position: relative;
+
+        @include media(lg) {
+            margin-right: 130px;
+        }
 
         &::before {
             content: "";
@@ -62,6 +67,7 @@
     &__discription {
         @include media(sm) {
             width: 506px;
+            align-self: flex-start;
         }
 
         @include media(md) {
