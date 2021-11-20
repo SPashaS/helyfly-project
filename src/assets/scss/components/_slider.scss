@@ -1,0 +1,41 @@
+.slider {
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 52px;
+    }
+
+    &__circle {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background-color: $accentColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__number {
+        @include text(30px, 700, 44px, white);
+    }
+
+    &__disc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__question {
+        @include text(16px, 500, 23px, $textColor);
+        margin-bottom: 10px;
+    }
+
+    &__answer {
+        @include text(14px, 400, 20px, $textColor);
+        margin-bottom: 69px;
+    }
+}
