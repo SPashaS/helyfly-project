@@ -1,4 +1,8 @@
 .slider {
+    @include media(md) {
+
+    }
+
     &__item {
         display: flex;
         flex-direction: column;

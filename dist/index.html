@@ -283,8 +283,24 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.slider').slick();
-        });
+            $('.slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                responsive: [
+                    {
+                    breakpoint: 768, // и больше
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                    }
+                    }
+                ]
+                });
+            });
     </script>
 </body>
 </html>
