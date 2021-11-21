@@ -201,6 +201,12 @@ a {
     width: 160px;
 }
 
+@media (min-width: 768px) {
+    .slider {
+        display: none;
+    }
+}
+
 .slider__item {
     display: -ms-flexbox;
     display: flex;
@@ -210,7 +216,7 @@ a {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    border: 1px solid red;
+    padding-top: 52px;
 }
 
 .slider__circle {
@@ -224,6 +230,14 @@ a {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider__number {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 44px;
+    color: white;
 }
 
 .slider__disc {
@@ -242,6 +256,7 @@ a {
     font-weight: 500;
     line-height: 23px;
     color: #37373F;
+    margin-bottom: 10px;
 }
 
 .slider__answer {
@@ -249,6 +264,7 @@ a {
     font-weight: 400;
     line-height: 20px;
     color: #37373F;
+    margin-bottom: 69px;
 }
 
 .header {
@@ -1045,11 +1061,12 @@ a {
 .map__container {
     padding: 0 23px;
     width: 100%;
-    margin: 0 auto;
 }
 
 .map__slider-wrapper {
     border: 1px solid #c7c7c7;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .map__camerist-card {
