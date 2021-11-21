@@ -1,16 +1,16 @@
-.header .container, .main .container, .information .container, .photos .container, .about .container, .record .container {
+.header .container, .main .container, .information .container, .photos .container, .about .container, .record .container, .map .container, .reviews .container {
   padding: 0 15px;
   width: 100%;
   max-width: 1140px;
   margin: 0 auto; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container {
+    .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container, .map .container, .reviews .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container {
+    .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container, .map .container, .reviews .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container {
+    .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container, .map .container, .reviews .container {
       padding: 0; } }
 
 *,
@@ -181,7 +181,89 @@ a {
   font-weight: 400;
   line-height: 20px;
   color: #37373F;
-  margin-bottom: 69px; }
+  margin-bottom: 19px; }
+
+.article__header {
+  position: relative;
+  margin-bottom: 14px; }
+  .article__header-inner {
+    display: flex;
+    margin-bottom: 24px; }
+
+.article__image {
+  width: 84px;
+  height: 84px;
+  margin-right: 18px; }
+  @media (min-width: 768px) {
+    .article__image {
+      width: 101px;
+      height: 101px;
+      margin-right: 20px; } }
+
+.article__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.article__name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #37373F; }
+
+.article__profession {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #37373F; }
+
+.article__image-rating {
+  width: 118px;
+  height: 17px; }
+
+.article__content {
+  border-bottom: 0.5px solid #C7C7C7; }
+  @media (min-width: 768px) {
+    .article__content {
+      margin-left: 120px; } }
+
+.article__title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #B3B3B3;
+  padding-left: 20px;
+  position: relative; }
+  @media (min-width: 768px) {
+    .article__title {
+      position: absolute;
+      top: 76px;
+      left: 250px; } }
+  .article__title:after {
+    content: "";
+    display: block;
+    background-image: url(./../images/reviews/tick.svg);
+    background-size: 15px 11.5px;
+    width: 15px;
+    height: 11.5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); }
+
+.article__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #37373F; }
+
+.article__time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #B3B3B3;
+  padding: 17px 0 44px;
+  display: block; }
 
 .header {
   background-color: #fff; }
@@ -683,26 +765,46 @@ a {
         line-height: 26px;
         color: #37373F; } }
 
-.map__iframe {
-  width: 100%;
-  height: 423px;
-  border: 0; }
-  @media (min-width: 576px) {
-    .map__iframe {
-      height: 509px; } }
+.map {
+  position: relative; }
+  .map__iframe {
+    width: 100%;
+    height: 423px;
+    border: 0; }
+    @media (min-width: 576px) {
+      .map__iframe {
+        height: 509px; } }
+  @media (min-width: 1280px) {
+    .map .container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%); } }
+  .map__slider-wrapper {
+    background-color: white;
+    border: 1px solid #c7c7c7;
+    max-width: 400px;
+    margin: 52px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 1280px) {
+      .map__slider-wrapper {
+        margin: 0;
+        max-width: 420px;
+        height: 469px; } }
+  .map__slider {
+    width: 212px; }
+  .map__camerist-card {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center; }
 
-.map__container {
-  padding: 0 23px;
-  width: 100%; }
-
-.map__slider-wrapper {
-  border: 1px solid #c7c7c7;
-  max-width: 400px;
-  margin: 0 auto; }
-
-.map__camerist-card {
-  padding: 20px 30px;
-  display: flex;
-  justify-content: center; }
+.reviews__title {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 39px;
+  color: #37373F;
+  margin: 40px auto 50px; }
 
 /*# sourceMappingURL=style.min.css.map */
