@@ -1,0 +1,84 @@
+.article {
+    &__header {
+        position: relative;
+        margin-bottom: 14px;
+        &-inner {
+            display: flex;
+            margin-bottom: 24px;
+        }
+    }
+
+
+    &__image {
+        width: 84px;
+        height: 84px;
+        margin-right: 18px;
+
+        @include media(md) {
+            width: 101px;
+            height: 101px;
+            margin-right: 20px;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__name {
+        @include text(16px, 500, 20px, $textColor);
+    }
+
+    &__profession {
+        @include text(12px, 400, 21px, $textColor);
+    }
+
+    &__image-rating {
+        width: 118px;
+        height: 17px;
+    }
+
+    &__content {
+        border-bottom: 0.5px solid #C7C7C7;
+        @include media(md) {
+            margin-left: 120px;
+        }
+        
+    }
+
+    &__title {
+        @include text(14px, 400, 21px, $textColorLight);
+        padding-left: 20px;
+        position: relative;
+        @include media(md) {
+            position: absolute;
+            top: 76px;
+            left: 250px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            background-image: url(./../images/reviews/tick.svg);
+            background-size: 15px 11.5px;
+            width: 15px;
+            height: 11.5px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__text {
+        @include text(14px, 400, 21px, $textColor);
+    }
+
+    &__time {
+        @include text(14px, 400, 21px, $textColorLight);
+        padding: 17px 0 44px;
+        display: block;
+    }
+}

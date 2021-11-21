@@ -1,0 +1,11 @@
+.reviews{
+
+    .container {
+        @extend %container;
+    }
+
+    &__title {
+        @include text(26px, 400, 39px, $textColor);
+        margin: 40px auto 50px;
+    }
+}

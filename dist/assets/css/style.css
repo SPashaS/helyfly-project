@@ -201,12 +201,6 @@ a {
     width: 160px;
 }
 
-@media (min-width: 768px) {
-    .slider {
-        display: none;
-    }
-}
-
 .slider__item {
     display: -ms-flexbox;
     display: flex;

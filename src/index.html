@@ -224,7 +224,7 @@
 <!-- map -->
 <section class="map">
     <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26909.682504240227!2d37.572574298787224!3d55.75837660861024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bd01562885f%3A0x9a430b29076b02d3!2z0J_QsNGA0Log0JrRgNCw0YHQvdCw0Y8g0J_RgNC10YHQvdGP!5e0!3m2!1sru!2sby!4v1637337312362!5m2!1sru!2sby" allowfullscreen="" loading="lazy"></iframe>
-    <div class="map__container">
+    <div class="container">
         <div class="map__slider-wrapper">
             <div class="map__slider slider">
 
@@ -277,6 +277,35 @@
 
 </section>
 <!-- / map -->
+<!-- reviews -->
+<section class="reviews">
+    <div class="container">
+        <h3 class="reviews__title">Отзывы</h3>
+        <article class="reviews__article article">
+            <div class="article__header">
+                <div class="article__header-inner">
+                    <img class="article__image" src="./assets/images/reviews/avatar.png" alt="">
+                    <div class="article__description">
+                        <p class="article__name">Валерия Антонова</p>
+                        <p class="article__profession">Арт-директор</p>
+                        <img class="article__image-rating" src="./assets/images/reviews/stars.svg" alt="Рейтинг" >
+                    </div>
+                </div>
+                <h4 class="article__title">Супер! Я бы заказала съемку снова!</h4>
+            </div>
+            <div class="article__content">
+                <p class="article__text">
+                    Хотим выразить огромную благодарность вашей компании! Получили море 
+                    ощущений, все прошло просто замечательно. Фотки получились великолепные,
+                    отдельное спасибо фотографу!
+                </p>
+                <time class="article__time">27 Апреля, 2019г.</time>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- / reviews -->
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -288,14 +317,17 @@
                 infinite: true,
                 speed: 300,
                 slidesToShow: 3,
+                arrows: true,
                 responsive: [
                     {
-                    breakpoint: 768, // и больше
+                    breakpoint: 1280, // и больше
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
                         dots: true,
+                        arrows: true,
+                        appendArrows: $('.slider'),
                     }
                     }
                 ]

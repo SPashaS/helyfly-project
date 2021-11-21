@@ -1,4 +1,6 @@
 .map {
+    position:  relative;
+
     &__iframe {
         width: 100%;
         height: 423px;
@@ -9,19 +11,35 @@
         }
     }
 
-    &__container {
-        padding: 0 23px;
-        width: 100%;
-        
+    .container {
+        @extend %container;
+
+        @include media(lg) {
+            position: absolute;
+            top: 20px;
+            left:50%;
+            transform: translateX(-50%);
+        }
     }
 
     &__slider-wrapper {
+        background-color: white;
         border: 1px solid #c7c7c7;
         max-width: 400px;
-        margin: 0 auto;
+        margin: 52px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media(lg) {
+            margin: 0;
+            max-width: 420px;
+            height: 469px;
+        }
     }
 
     &__slider {
+        width: 212px;
     }
 
     &__camerist-card {

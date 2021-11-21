@@ -1,7 +1,4 @@
 .slider {
-    @include media(md) {
-
-    }
 
     &__item {
         display: flex;
@@ -40,6 +37,6 @@
 
     &__answer {
         @include text(14px, 400, 20px, $textColor);
-        margin-bottom: 69px;
+        margin-bottom: 19px;
     }
 }
