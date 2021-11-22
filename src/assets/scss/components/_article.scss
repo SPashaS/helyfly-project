@@ -1,7 +1,15 @@
 .article {
+    margin-bottom: 30px;
+    max-width: 630px;
+
     &__header {
         position: relative;
-        margin-bottom: 14px;
+        height: 132px;
+
+        @include media(md) {
+            height: 117px;
+        }
+
         &-inner {
             display: flex;
             margin-bottom: 24px;
@@ -21,18 +29,29 @@
         }
     }
 
-    &__description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
     &__name {
         @include text(16px, 500, 20px, $textColor);
+        margin-top: 10px;
+        margin-bottom: 6px;
+
+        @include media(md) {
+            font-size: 18px;
+            line-height: 21px;
+        }
     }
 
     &__profession {
         @include text(12px, 400, 21px, $textColor);
+        margin-bottom: 7px;
+    }
+
+    &__wrapper {
+        @include media(md) {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
     }
 
     &__image-rating {
@@ -40,22 +59,18 @@
         height: 17px;
     }
 
-    &__content {
-        border-bottom: 0.5px solid #C7C7C7;
-        @include media(md) {
-            margin-left: 120px;
-        }
-        
-    }
-
+    
     &__title {
         @include text(14px, 400, 21px, $textColorLight);
         padding-left: 20px;
-        position: relative;
+        position: absolute;
+        left: 0;
+        bottom: 14px;
+
         @include media(md) {
-            position: absolute;
-            top: 76px;
-            left: 250px;
+            position: relative;
+            left: 0;
+            bottom: 0;
         }
 
         &:after {
@@ -70,6 +85,19 @@
             left: 0;
             transform: translateY(-50%);
         }
+    }
+
+    &__content {
+        border-bottom: 0.5px solid #C7C7C7;
+
+        @include media(sm) {
+            max-width: 510px;
+        }
+
+        @include media(md) {
+            margin-left: 120px;
+        }
+        
     }
 
     &__text {

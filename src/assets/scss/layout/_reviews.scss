@@ -8,4 +8,9 @@
         @include text(26px, 400, 39px, $textColor);
         margin: 40px auto 50px;
     }
+
+    &__footer { 
+        display: flex;
+        justify-content: center;
+    }
 }

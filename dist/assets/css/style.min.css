@@ -183,87 +183,98 @@ a {
   color: #37373F;
   margin-bottom: 19px; }
 
-.article__header {
-  position: relative;
-  margin-bottom: 14px; }
-  .article__header-inner {
-    display: flex;
-    margin-bottom: 24px; }
-
-.article__image {
-  width: 84px;
-  height: 84px;
-  margin-right: 18px; }
+.article {
+  margin-bottom: 30px;
+  max-width: 630px; }
+  .article__header {
+    position: relative;
+    height: 132px; }
+    @media (min-width: 768px) {
+      .article__header {
+        height: 117px; } }
+    .article__header-inner {
+      display: flex;
+      margin-bottom: 24px; }
+  .article__image {
+    width: 84px;
+    height: 84px;
+    margin-right: 18px; }
+    @media (min-width: 768px) {
+      .article__image {
+        width: 101px;
+        height: 101px;
+        margin-right: 20px; } }
+  .article__name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #37373F;
+    margin-top: 10px;
+    margin-bottom: 6px; }
+    @media (min-width: 768px) {
+      .article__name {
+        font-size: 18px;
+        line-height: 21px; } }
+  .article__profession {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #37373F;
+    margin-bottom: 7px; }
   @media (min-width: 768px) {
-    .article__image {
-      width: 101px;
-      height: 101px;
-      margin-right: 20px; } }
-
-.article__description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-
-.article__name {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #37373F; }
-
-.article__profession {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #37373F; }
-
-.article__image-rating {
-  width: 118px;
-  height: 17px; }
-
-.article__content {
-  border-bottom: 0.5px solid #C7C7C7; }
-  @media (min-width: 768px) {
-    .article__content {
-      margin-left: 120px; } }
-
-.article__title {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #B3B3B3;
-  padding-left: 20px;
-  position: relative; }
-  @media (min-width: 768px) {
-    .article__title {
-      position: absolute;
-      top: 76px;
-      left: 250px; } }
-  .article__title:after {
-    content: "";
-    display: block;
-    background-image: url(./../images/reviews/tick.svg);
-    background-size: 15px 11.5px;
-    width: 15px;
-    height: 11.5px;
+    .article__wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 50px; } }
+  .article__image-rating {
+    width: 118px;
+    height: 17px; }
+  .article__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #B3B3B3;
+    padding-left: 20px;
     position: absolute;
-    top: 50%;
     left: 0;
-    transform: translateY(-50%); }
-
-.article__text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #37373F; }
-
-.article__time {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  color: #B3B3B3;
-  padding: 17px 0 44px;
-  display: block; }
+    bottom: 14px; }
+    @media (min-width: 768px) {
+      .article__title {
+        position: relative;
+        left: 0;
+        bottom: 0; } }
+    .article__title:after {
+      content: "";
+      display: block;
+      background-image: url(./../images/reviews/tick.svg);
+      background-size: 15px 11.5px;
+      width: 15px;
+      height: 11.5px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%); }
+  .article__content {
+    border-bottom: 0.5px solid #C7C7C7; }
+    @media (min-width: 576px) {
+      .article__content {
+        max-width: 510px; } }
+    @media (min-width: 768px) {
+      .article__content {
+        margin-left: 120px; } }
+  .article__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #37373F; }
+  .article__time {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #B3B3B3;
+    padding: 17px 0 44px;
+    display: block; }
 
 .header {
   background-color: #fff; }
@@ -806,5 +817,9 @@ a {
   line-height: 39px;
   color: #37373F;
   margin: 40px auto 50px; }
+
+.reviews__footer {
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.min.css.map */
