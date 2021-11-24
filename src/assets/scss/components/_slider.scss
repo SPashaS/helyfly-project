@@ -1,11 +1,16 @@
 .slider {
-
+    min-width: 0;
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-top: 52px;
+        
+        @include media(lg) {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 18px;
+        }
     }
 
     &__circle {
@@ -28,6 +33,10 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @include media(lg) {
+            align-items: flex-start;
+        }
     }
 
     &__question {
@@ -37,6 +46,6 @@
 
     &__answer {
         @include text(14px, 400, 20px, $textColor);
-        margin-bottom: 19px;
+        margin-bottom: 9px;
     }
 }

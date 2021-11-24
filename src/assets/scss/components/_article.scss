@@ -2,6 +2,14 @@
     margin-bottom: 30px;
     max-width: 630px;
 
+    &:last-of-type {
+        display: none;
+
+        @include media(sm) {
+            display: block;
+        }
+    }
+
     &__header {
         position: relative;
         height: 132px;

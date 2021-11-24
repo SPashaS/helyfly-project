@@ -13,4 +13,17 @@
         display: flex;
         justify-content: center;
     }
+
+    &__four {
+        @include media(sm) {
+            display: none;
+        }
+    }
+
+    &__three {
+        display: none;
+        @include media(sm) {
+            display: inline;
+        }
+    }
 }

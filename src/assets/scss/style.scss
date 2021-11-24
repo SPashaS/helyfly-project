@@ -23,9 +23,10 @@ ul {
     list-style-type: none;
 }
 
+@import './slick';
+
 @import './components/rating';
 @import './components/link-arrow';
-@import './components/camerist-card';
 @import './components/slider';
 @import './components/article';
 

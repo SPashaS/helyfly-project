@@ -22,11 +22,12 @@
         }
     }
 
-    &__slider-wrapper {
+    &__box-wrapper {
         background-color: white;
         border: 1px solid #c7c7c7;
         max-width: 400px;
         margin: 52px auto 0;
+        padding: 52px 0 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -35,16 +36,67 @@
             margin: 0;
             max-width: 420px;
             height: 469px;
+            padding: 51px 30px 54px;
+            align-items: flex-start;
+            justify-content: space-between;
         }
     }
 
     &__slider {
-        width: 212px;
+        width: 232px;
+        border: 1px solid red;
+
+        @include media(lg) {
+            width: 100%;
+        }
     }
 
-    &__camerist-card {
-        padding: 20px 30px;
+    &__worker-card {
+        width: 215px;
+        margin-top: 40px;
         display: flex;
         justify-content: center;
+        border: 1px solid black;
+
+        @include media(lg) {
+            margin-top: 0;
+            width: 100%;
+            justify-content: flex-start;
+        }
+        
+
+        &-disc {
+            display: flex;
+            flex-direction: column;
+            margin-left: 11px;
+        }
+    
+        &-image {
+            width: 67px;
+            height: 67px;
+        }
+    
+        &-name {
+            @include text(16px, 500, 20px, $textColor);
+        }
+    
+        &-profession {
+            @include text(14px, 400, 21px, $textColor);
+        }
+    
+        &-link {
+            @include text(14px, 400, 21px, $linkColor);
+
+            @include media(lg) {
+                width: 100%;
+            }
+
+            & span {
+                @include media(lg) {
+                    display: none;
+                }
+            }
+        }
+
     }
 }

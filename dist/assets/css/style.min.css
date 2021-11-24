@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header .container, .main .container, .information .container, .photos .container, .about .container, .record .container, .map .container, .reviews .container, .footer__top .container, .footer__content .container {
   padding: 0 15px;
   width: 100%;
@@ -30,6 +31,59 @@ a {
 
 ul {
   list-style-type: none; }
+
+/* Слайдер */
+.slick-slider {
+  position: relative;
+  padding: 0 30px; }
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden; }
+
+/* Лента слайдов */
+.slick-track {
+  display: flex; }
+
+/* Стрелка */
+.slick-arrow {
+  position: absolute;
+  top: 15%;
+  z-index: 10;
+  font-size: 0;
+  width: 10px;
+  height: 19px;
+  border: 0; }
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url(./../images/slider/arrowLeft.svg) 0 0/100% no-repeat; }
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  right: 0;
+  background: url(./../images/slider/arrowRight.svg) 0 0/100% no-repeat; }
+
+/* Точки (булиты) */
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px; }
+
+/* Элемент точки */
+.slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #C7C7C7;
+  background-color: #fff; }
+
+.slick-dots li.slick-active button {
+  border: 1px solid #FC9B09;
+  background-color: #FC9B09; }
 
 .rating-box {
   display: flex;
@@ -117,78 +171,61 @@ ul {
     top: 50%;
     transform: translateY(-50%); }
 
-.camerist-card {
-  display: flex; }
-  .camerist-card__disc {
+.slider {
+  min-width: 0; }
+  .slider__item {
     display: flex;
     flex-direction: column;
-    margin-left: 11px; }
-  .camerist-card__photo {
-    width: 67px;
-    height: 67px; }
-  .camerist-card__name {
+    justify-content: space-between;
+    align-items: center; }
+    @media (min-width: 1280px) {
+      .slider__item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 18px; } }
+  .slider__circle {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #FC9B09;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; }
+  .slider__number {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 44px;
+    color: white; }
+  .slider__disc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    @media (min-width: 1280px) {
+      .slider__disc {
+        align-items: flex-start; } }
+  .slider__question {
     font-size: 16px;
     font-weight: 500;
+    line-height: 23px;
+    color: #37373F;
+    margin-bottom: 10px; }
+  .slider__answer {
+    font-size: 14px;
+    font-weight: 400;
     line-height: 20px;
-    color: #37373F; }
-  .camerist-card__profession {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #37373F; }
-  .camerist-card__more-link {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #5286EC;
-    width: 160px; }
-
-.slider__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 52px; }
-
-.slider__circle {
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background-color: #FC9B09;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px; }
-
-.slider__number {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 44px;
-  color: white; }
-
-.slider__disc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; }
-
-.slider__question {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 23px;
-  color: #37373F;
-  margin-bottom: 10px; }
-
-.slider__answer {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #37373F;
-  margin-bottom: 19px; }
+    color: #37373F;
+    margin-bottom: 9px; }
 
 .article {
   margin-bottom: 30px;
   max-width: 630px; }
+  .article:last-of-type {
+    display: none; }
+    @media (min-width: 576px) {
+      .article:last-of-type {
+        display: block; } }
   .article__header {
     position: relative;
     height: 132px; }
@@ -794,25 +831,68 @@ ul {
       top: 20px;
       left: 50%;
       transform: translateX(-50%); } }
-  .map__slider-wrapper {
+  .map__box-wrapper {
     background-color: white;
     border: 1px solid #c7c7c7;
     max-width: 400px;
     margin: 52px auto 0;
+    padding: 52px 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center; }
     @media (min-width: 1280px) {
-      .map__slider-wrapper {
+      .map__box-wrapper {
         margin: 0;
         max-width: 420px;
-        height: 469px; } }
+        height: 469px;
+        padding: 51px 30px 54px;
+        align-items: flex-start;
+        justify-content: space-between; } }
   .map__slider {
-    width: 212px; }
-  .map__camerist-card {
-    padding: 20px 30px;
+    width: 232px;
+    border: 1px solid red; }
+    @media (min-width: 1280px) {
+      .map__slider {
+        width: 100%; } }
+  .map__worker-card {
+    width: 215px;
+    margin-top: 40px;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    border: 1px solid black; }
+    @media (min-width: 1280px) {
+      .map__worker-card {
+        margin-top: 0;
+        width: 100%;
+        justify-content: flex-start; } }
+    .map__worker-card-disc {
+      display: flex;
+      flex-direction: column;
+      margin-left: 11px; }
+    .map__worker-card-image {
+      width: 67px;
+      height: 67px; }
+    .map__worker-card-name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #37373F; }
+    .map__worker-card-profession {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #37373F; }
+    .map__worker-card-link {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #5286EC; }
+      @media (min-width: 1280px) {
+        .map__worker-card-link {
+          width: 100%; } }
+      @media (min-width: 1280px) {
+        .map__worker-card-link span {
+          display: none; } }
 
 .reviews__title {
   font-size: 26px;
@@ -824,6 +904,16 @@ ul {
 .reviews__footer {
   display: flex;
   justify-content: center; }
+
+@media (min-width: 576px) {
+  .reviews__four {
+    display: none; } }
+
+.reviews__three {
+  display: none; }
+  @media (min-width: 576px) {
+    .reviews__three {
+      display: inline; } }
 
 .footer__top {
   margin-top: 47px;
