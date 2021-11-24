@@ -23,6 +23,7 @@
     &__wrapper {
         display: flex;
         align-items: center;
+        margin-top: 4px;
     }
 
     &__logo {
@@ -65,6 +66,8 @@
     }
 
     &__user {
+        margin-top: 4px;
+        
         @include media(lg) {
             display: none;
         }

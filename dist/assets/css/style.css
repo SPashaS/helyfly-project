@@ -53,8 +53,6 @@ ul {
     padding: 0 30px;
 }
 
-/* Слайдер запущен */
-/* Слайдер с точками */
 /* Ограничивающая оболочка */
 .slick-list {
     overflow: hidden;
@@ -66,15 +64,10 @@ ul {
     display: flex;
 }
 
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
 /* Стрелка */
 .slick-arrow {
     position: absolute;
-    top: 50%;
+    top: 15%;
     z-index: 10;
     font-size: 0;
     width: 10px;
@@ -94,10 +87,32 @@ ul {
     background: url(./../images/slider/arrowRight.svg) 0 0/100% no-repeat;
 }
 
-/* Стрелка не активная */
 /* Точки (булиты) */
-/* Активная точка */
+.slick-dots {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 11px;
+}
+
 /* Элемент точки */
+.slick-dots li button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #C7C7C7;
+    background-color: #fff;
+}
+
+.slick-dots li.slick-active button {
+    border: 1px solid #FC9B09;
+    background-color: #FC9B09;
+}
+
 .rating-box {
     display: -ms-flexbox;
     display: flex;
@@ -218,46 +233,6 @@ ul {
     transform: translateY(-50%);
 }
 
-.camerist-card {
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.camerist-card__disc {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-left: 11px;
-}
-
-.camerist-card__photo {
-    width: 67px;
-    height: 67px;
-}
-
-.camerist-card__name {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #37373F;
-}
-
-.camerist-card__profession {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #37373F;
-}
-
-.camerist-card__more-link {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #5286EC;
-    width: 160px;
-}
-
 .slider {
     min-width: 0;
 }
@@ -271,7 +246,16 @@ ul {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 52px;
+}
+
+@media (min-width: 1280px) {
+    .slider__item {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        gap: 18px;
+    }
 }
 
 .slider__circle {
@@ -306,6 +290,13 @@ ul {
     align-items: center;
 }
 
+@media (min-width: 1280px) {
+    .slider__disc {
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
 .slider__question {
     font-size: 16px;
     font-weight: 500;
@@ -319,7 +310,7 @@ ul {
     font-weight: 400;
     line-height: 20px;
     color: #37373F;
-    margin-bottom: 19px;
+    margin-bottom: 9px;
 }
 
 .article {
@@ -1278,11 +1269,12 @@ ul {
     }
 }
 
-.map__slider-wrapper {
+.map__box-wrapper {
     background-color: white;
     border: 1px solid #c7c7c7;
     max-width: 400px;
     margin: 52px auto 0;
+    padding: 52px 0 20px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1292,23 +1284,92 @@ ul {
 }
 
 @media (min-width: 1280px) {
-    .map__slider-wrapper {
+    .map__box-wrapper {
         margin: 0;
         max-width: 420px;
         height: 469px;
+        padding: 51px 30px 54px;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
 }
 
 .map__slider {
-    width: 212px;
+    width: 232px;
+    border: 1px solid red;
 }
 
-.map__camerist-card {
-    padding: 20px 30px;
+@media (min-width: 1280px) {
+    .map__slider {
+        width: 100%;
+    }
+}
+
+.map__worker-card {
+    width: 215px;
+    margin-top: 40px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
+    border: 1px solid black;
+}
+
+@media (min-width: 1280px) {
+    .map__worker-card {
+        margin-top: 0;
+        width: 100%;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
+
+.map__worker-card-disc {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 11px;
+}
+
+.map__worker-card-image {
+    width: 67px;
+    height: 67px;
+}
+
+.map__worker-card-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #37373F;
+}
+
+.map__worker-card-profession {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #37373F;
+}
+
+.map__worker-card-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #5286EC;
+}
+
+@media (min-width: 1280px) {
+    .map__worker-card-link {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .map__worker-card-link span {
+        display: none;
+    }
 }
 
 .reviews__title {

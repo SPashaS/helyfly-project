@@ -1,8 +1,8 @@
 .footer {
     &__top {
-        margin-top: 47px;
+        margin-top: 78px;
         border-bottom: 0.5px solid #B3B3B3;
-        height: 70px;
+        height: 49px;
 
         .container {
             @extend %container;
@@ -35,8 +35,7 @@
 // content 
     &__content {
         height: 139px;
-        display: flex;
-        align-items: center;
+        padding-top: 26px;
         @include media(sm) {
             background-color: #FAF9F8;
             height: 77px;
@@ -47,7 +46,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             align-items: center;
-            gap: 24px;
+            gap: 22px;
             @include media(sm) {
                 grid-template-columns: 1fr 2fr 2fr 1fr;
             }
@@ -58,7 +57,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 20px;
+        gap: 17px;
     }
 
     &__description {

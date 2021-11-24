@@ -22,6 +22,7 @@
     &__table {
         border: 1px solid #C7C7C7;
         margin-bottom: 45px;
+        @include text(18px, 400, 26px, $textColor);
 
         @include media(md) {
             margin-bottom: 82px;
@@ -31,9 +32,13 @@
     &__tb-header {
         height: 60px;
         border-bottom: 1px solid #C7C7C7;
-        padding-top: 20px;
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        & span {
+            font-weight: 500;
+        }
 
         @include media(sm) {
             height: 74px;
@@ -72,9 +77,10 @@
     &__tb-row {
         border-bottom: 1px solid #C7C7C7;
         height: 220px;
-        padding: 30px 20px;
+        padding: 29px 20px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         @include media(sm) {
             height: 130px;
@@ -84,24 +90,16 @@
             align-items: center;
         }
 
-        &-inner span {
-            display: block;
-            margin-bottom: 10px;
-
-            &:last-child {
-                margin-bottom: 20px;
-
-                @include media(sm) {
-                    margin-bottom: 0;
-                }
-            }
-
-            
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
     }
 
     &__cost {
         font-weight: 600;
+        font-weight: 22px;
     }
 
     &__tb-footer {

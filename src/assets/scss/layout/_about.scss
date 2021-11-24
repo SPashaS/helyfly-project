@@ -1,5 +1,5 @@
 .about {
-    padding-top: 63px;
+    padding-top: 50px;
 
     .container {
         @extend %container;
@@ -9,6 +9,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
 
         @include media(lg) {
             flex-direction: row-reverse;
@@ -17,12 +18,13 @@
         }
     }
 
+
     &__image-box {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 290px;
-        position: relative;
+        margin-bottom: 19px;
+        margin-left: -12px;
 
         @include media(lg) {
             margin-right: 130px;
@@ -61,7 +63,6 @@
         @include text(14px, 500, 21px, $linkColor);
         text-align: center;
         width: 200px;
-        margin-bottom: 25px;
     }
     
     &__discription {
@@ -78,15 +79,21 @@
 
     &__title {
         @include text(18px, 500, 26px, $textColor);
-        margin-bottom: 14px;
+        margin-bottom: 13px;
     }
 
     &__text {
         @include text(16px, 400, 24px, $textColor);
+        margin-bottom: 27px;
+        width: 285px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     &__link-wrap {
-        margin: 22px 0 30px;
+        margin: 19px 0 27px;
     }
 
     &__link-more {

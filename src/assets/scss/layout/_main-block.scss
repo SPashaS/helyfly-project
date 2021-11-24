@@ -4,6 +4,10 @@
     background-size: cover;
     background-position-x: 62%;
 
+    @include media(lg) {
+        background-position-y: 50%; 
+    }
+
     .container {
         @extend %container;
     }
@@ -11,14 +15,13 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         height: 655px;
     }
 
     &__title {
         @include text(32px, 700, 39px, $primaryColor);
         max-width: 247px;
-        margin-top: -6px;
+        margin-top: 141px;
 
         span {
             color: $accentColor;
@@ -34,7 +37,7 @@
     }
     &__price-box {
         position: relative;
-        margin: 24px 0 12px;
+        margin-top: 35px;
 
         &::after {
             content: "";
@@ -58,8 +61,8 @@
     }
 
     &__price {
-        height: 86px;
-        width: 200px;
+        height: 93px;
+        width: 209px;
         
         margin-left: -5px;
 
@@ -75,6 +78,7 @@
         border: 3px solid $primaryColor;
         border-radius: 7px;
         background-color: transparent;
+        margin-top: 3px;
         @include text(16px, 900, 20px, white);
         filter:  drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7));
         // transform: translateX(-6px);
