@@ -7,8 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>helyfly</title>
 </head>
@@ -225,7 +223,7 @@
 <section class="map">
     <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26909.682504240227!2d37.572574298787224!3d55.75837660861024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bd01562885f%3A0x9a430b29076b02d3!2z0J_QsNGA0Log0JrRgNCw0YHQvdCw0Y8g0J_RgNC10YHQvdGP!5e0!3m2!1sru!2sby!4v1637337312362!5m2!1sru!2sby" allowfullscreen="" loading="lazy"></iframe>
     <div class="container">
-        <div class="map__slider-wrapper">
+        <div class="map__box-wrapper">
             <div class="map__slider slider">
 
                 <div class="slider__item-wrapper">
@@ -263,18 +261,17 @@
                 </div>
                 
             </div>
-            <div class="map__camerist-card camerist-card">
-                <img class="camerist-card__photo" src="./assets/images/about/avatar.png" alt="Фотограф" >
-                <div class="camerist-card__disc">
-                    <span class="camerist-card__name">Мария Иванова</span>
-                    <span class="camerist-card__profession">Фотограф</span>
-                    <a class="camerist-card__more-link" href="#">Показать больше информации <br> о фотографе</a>
+            <div class="map__worker-card">
+                <img class="map__worker-card-image" src="./assets/images/about/avatar.png" alt="Фотограф" >
+                <div class="map__worker-card-disc">
+                    <span class="map__worker-card-name">Мария Иванова</span>
+                    <span class="map__worker-card-profession">Фотограф</span>
+                    <a class="map__worker-card-link" href="#">Показать больше информации <br>
+                        <span>о фотографе</span></a>
                 </div>
             </div>
         </div>
     </div>
-    
-
 </section>
 <!-- / map -->
 <!-- reviews -->
@@ -353,7 +350,7 @@
             </div>
         </article>
         <div class="reviews__footer">
-            <a class="article__link link link--two-arr" href="#">Показать Все (134)</a>
+            <a class="article__link link link--two-arr" href="#">Показать Все (13<span class="reviews__four">4</span><span class="reviews__three">3</span>)</a>
         </div>
         
     </div>
@@ -419,36 +416,22 @@
 </footer>
 <!-- / footer  -->
 
-
-
-
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    
     <script type="text/javascript">
         $(document).ready(function(){
             $('.slider').slick({
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 3,
-                arrows: true,
+                dots: true,            
                 responsive: [
                     {
-                    breakpoint: 1280, // и больше
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true,
-                        arrows: true,
-                        appendArrows: $('.slider'),
+                        breakpoint: 1280,
+                        settings: "unslick"
                     }
-                    }
-                ]
-                });
+                ],
+                mobileFirst: true
             });
+        });
     </script>
 </body>
 </html>
