@@ -19,7 +19,7 @@
         }
     }
 
-    &__table {
+    &__flex-table {
         border: 1px solid #C7C7C7;
         margin-bottom: 45px;
         @include text(18px, 400, 26px, $textColor);
@@ -29,93 +29,114 @@
         }
     }
 
-    &__tb-header {
-        height: 60px;
-        border-bottom: 1px solid #C7C7C7;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        & span {
-            font-weight: 500;
-        }
-
-        @include media(sm) {
-            height: 74px;
-            padding: 30px 20px 0;
-            justify-content: flex-start;
-        }
+    &__tr {
+        padding: 0 20px;
+        
         @include media(md) {
-            padding: 30px 30px 0;
-        }
-    }
-    
-    &__tb-header-time {
-        position: relative;
-
-        @include media(sm) {
-            text-align: left;
+            padding: 0 30px;
         }
 
-        &::after {
-            content: "";
-            display: none;
-            background-image: url(./../images/record/calendar.png);
-            background-size: 35px;
-            width: 35px;
-            height: 35px;
-            position: absolute;
-            top: -7px;
-            right: -46px;
+        &--header {
+            height: 60px;
+            border-bottom: 1px solid #C7C7C7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & span {
+                font-weight: 500;
+            }
 
             @include media(sm) {
-                display: block;
+                height: 74px;
+                padding: 0 20px;
+                justify-content: flex-start;
+            }
+            @include media(md) {
+                padding: 0 30px;
+            }
+
+            &-time {
+                position: relative;
+
+                @include media(sm) {
+                    text-align: left;
+                }
+
+                &::after {
+                    content: "";
+                    display: none;
+                    background-image: url(./../images/record/calendar.png);
+                    background-size: 35px;
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    top: -7px;
+                    right: -46px;
+
+                    @include media(sm) {
+                        display: block;
+                    }
+                }
             }
         }
-    }
 
-    &__tb-row {
-        border-bottom: 1px solid #C7C7C7;
-        height: 220px;
-        padding: 29px 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        @include media(sm) {
-            height: 130px;
-            padding: 20px 20px;
-            flex-direction: row;
+        &--row {
+            border-bottom: 1px solid #C7C7C7;
+            height: 220px;
+            padding: 29px 20px;
+            display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+
+            @include media(sm) {
+                height: 130px;
+                padding: 20px 20px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            @include media(md) {
+                height: 130px;
+                padding: 20px 30px;
+            }
         }
 
-        &-inner {
+        &-row-inner {
             display: flex;
             flex-direction: column;
             gap: 6px;
         }
+
+        &-cost {
+            font-weight: 600;
+            font-weight: 22px;
+        }
+
+        &-btn {
+            width: 129px;
+            height: 50px;
+            border: 2px solid $accentColor;
+            border-radius: 3px;
+            background-color: transparent;
+            @include text(14px, 400, 17px, $accentColor);
+            filter:  drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7));
+        }
+
+        &--footer {
+            height: 100px;
+            padding-top: 31px;
+        }
     }
 
-    &__cost {
-        font-weight: 600;
-        font-weight: 22px;
-    }
 
-    &__tb-footer {
-        height: 100px;
-        padding: 31px 5px 0 22px;
-    }
+    
 
-    &__btn {
-        width: 129px;
-        height: 50px;
-        border: 2px solid $accentColor;
-        border-radius: 3px;
-        background-color: transparent;
-        @include text(14px, 400, 17px, $accentColor);
-        filter:  drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7));
-    }
+
+
+    
 
     &__rating-box {
         gap: 14px;
