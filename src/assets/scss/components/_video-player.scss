@@ -1,0 +1,97 @@
+.video-player {
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        @include media(md) {
+            max-width: 668px;
+        }
+
+        @include media(lg) {
+            max-width: 554px;
+        }
+    
+    &:hover &__orange-bar-wrapper {
+        transform: translateY(0);
+    }
+    &:hover button {
+        transform: scale(2);
+    }
+
+    &:hover & button.pause:before {
+        transform: scale(2);
+    }
+    &:hover & button.play:before {
+        transform: scale(2);
+    }
+
+    &__video {
+        width: 100%;
+    }
+
+    & button {
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:before {
+            content: "";
+            display: block;
+            background-image: url(./../images/information/play.svg);
+            background-size: 12px 17px;
+            width: 12px;
+            height: 17px;
+
+            @include media(sm) {
+                background-size: 16px 23px;
+                width: 16px;
+                height: 23px;
+            }
+        } 
+    }
+
+    & button.play:before {
+        content: "";
+        background-image: url(./../images/information/play.svg);
+        background-size: 12px 17px;
+        width: 12px;
+        height: 17px;
+    }
+
+    & button.pause:before {
+        content: "";
+        background-image: url(./../images/information/pause.svg);
+        background-size: 12px 17px;
+        width: 12px;
+        height: 17px;
+    }
+
+    &__orange-bar-wrapper {
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        transform: translateY(0) translateY(-10px);
+        transition: all 0.2s;
+    }
+
+    &__orange-bar {
+        height: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+    }
+
+    &__orange-juice {
+        height: 10px;
+        background-color: $accentColor;
+    }
+
+}
+

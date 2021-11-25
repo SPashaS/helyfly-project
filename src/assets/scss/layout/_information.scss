@@ -34,8 +34,9 @@
         }
     }
 
-    &__image-wrapper {
-        margin-bottom: 30px;
+    
+    &__video-player {
+        margin: 0 auto 30px;
         position: relative;
 
         @include media(lg) {
@@ -43,34 +44,8 @@
             top: 0px;
             right: 0px;
         }
-
-        &::after {
-            content: "";
-            display: block;
-            background-image: url(./../images/information/play.svg);
-            background-size: 12px 17px;
-            width: 12px;
-            height: 17px;
-            position: absolute;
-            bottom: 10%;
-            right: 7%;
-
-            @include media(sm) {
-                background-size: 16px 23px;
-                width: 16px;
-                height: 23px;
-            }
-        }
     }
 
-    &__image {
-        width: 100%;
-        border-radius: 4px;
-
-        @include media(lg) {
-            width: 554px;
-        }
-    }
 
 
     &__description {
