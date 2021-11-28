@@ -508,7 +508,8 @@ ul {
     font-weight: 900;
     line-height: 20px;
     color: white;
-    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)); }
+    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7));
+    cursor: pointer; }
 
 .information {
   font-size: 14px;
@@ -783,6 +784,7 @@ ul {
 .record__flex-table {
   border: 1px solid #C7C7C7;
   margin-bottom: 45px;
+  max-width: 770px;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
@@ -865,7 +867,8 @@ ul {
     font-weight: 400;
     line-height: 17px;
     color: #FC9B09;
-    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)); }
+    filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7));
+    cursor: pointer; }
   .record__tr--footer {
     height: 100px;
     padding-top: 31px; }
@@ -895,6 +898,9 @@ ul {
         font-weight: 400;
         line-height: 26px;
         color: #37373F; } }
+  .record__rating-box-stars-img {
+    width: 118px;
+    height: 17px; }
 
 .map {
   position: relative; }
