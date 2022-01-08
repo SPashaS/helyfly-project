@@ -287,7 +287,8 @@ ul {
       .article__title {
         position: relative;
         left: 0;
-        bottom: 0; } }
+        bottom: 0;
+        margin: 0 0 0 30px; } }
     .article__title:after {
       content: "";
       display: block;
