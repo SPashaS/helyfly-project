@@ -869,6 +869,10 @@ ul {
     }
 }
 
+.information__video-player video {
+    display: block;
+}
+
 .information__description {
     margin-bottom: 35px;
     width: 290px;
