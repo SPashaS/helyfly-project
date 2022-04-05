@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <title>Helyfly | Главная </title>
+    <title>helyfly</title>
 </head>
 <body>
 <!-- header -->
@@ -97,8 +97,6 @@
             </div>
             
         </div>
-        </div>
-        
     </div>
 </section>
 <!-- / information -->
@@ -207,7 +205,7 @@
 </section>
 <!-- / record -->
 <!-- map -->
-<section class="map">
+<div class="map">
     <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26909.682504240227!2d37.572574298787224!3d55.75837660861024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bd01562885f%3A0x9a430b29076b02d3!2z0J_QsNGA0Log0JrRgNCw0YHQvdCw0Y8g0J_RgNC10YHQvdGP!5e0!3m2!1sru!2sby!4v1637337312362!5m2!1sru!2sby" allowfullscreen="" loading="lazy"></iframe>
     <div class="container">
         <div class="map__box-wrapper">
@@ -259,7 +257,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- / map -->
 <!-- reviews -->
 <section class="reviews">
@@ -283,7 +281,7 @@
                     ощущений, все прошло просто замечательно. Фотки получились великолепные,
                     отдельное спасибо фотографу!
                 </p>
-                <time class="article__time">27 Апреля, 2019г.</time>
+                <div class="article__time">27 Апреля, 2019г.</div>
             </div>
         </article>
         <article class="reviews__article article">
@@ -303,7 +301,7 @@
                     Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный 
                     октябрьский день :) Впечатлило всё: сам вертолет, взлет, полёт, приземление. Организация полёта отличная. Спасибо!
                 </p>
-                <time class="article__time">19 Апреля, 2019г.</time>
+                <div class="article__time">19 Апреля, 2019г.</div>
             </div>
         </article>
         <article class="reviews__article article">
@@ -326,7 +324,7 @@
                     воздухоплавателя, правда некоторые ленятся за ним съездить))) Но все равно приятно. 
                     Короче, Презентстар – проверено. Оценка: пять!
                 </p>
-                <time class="article__time">11 Апреля, 2019г.</time>
+                <div class="article__time">11 Апреля, 2019г.</div>
             </div>
         </article>
 
@@ -393,14 +391,13 @@
                 </div>
             </div>
         </div>
-    </div>
 </footer>
 <!-- / footer  -->
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./assets/js/script.js"></script>
     
-    <script type="text/javascript">
+    <script>
         $(document).ready(function(){
             $('.slider').slick({
                 dots: true,            
